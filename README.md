@@ -156,10 +156,10 @@ Note that `.menu__item__subitem {}` is not allowed.
 Each piece of CSS needs a knowledge of what came before it and what might come after it – a.k.a. dependencies. Poor source order coupled with inherited/inheriting styles can lead to a lot of waste and/or redundancy. A pitfall here is undoing CSS: Writing more CSS in order to undo other CSS.
 
 Often, if you graph a stylesheet by specificity (a specificty graph), it will look like this:
-![](stylesheet_mess.png)
+![](img/stylesheet_mess.png)
 
 [ITCSS](http://csswizardry.net/talks/2014/11/itcss-dafed.pdf) (Inverted Triangle CSS) proposes a model where everything is ordered according to specificity. The goal of this is to help you tame and manage source order and the cascade and reduce waste and redundancy. This will help to avoid specificity problems and undoing CSS.
-![](stylesheet_location.png)
+![](img/stylesheet_location.png)
 
 However, ITCSS is a framework, so this lacks a clear implementation and rules of what kind of selectors are allowed within these layers, and simply sorting everything according to specificity order makes maintenance harder. So, in order to use the concept in practice, we need to clearly define different types of selectors.
 
